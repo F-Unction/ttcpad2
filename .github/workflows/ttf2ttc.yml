@@ -12,9 +12,11 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Unite
-      run: .\ttf2ttc\allunitettc.exe
+      run: 
+        cd ttf2ttc
+        .\allunitettc.exe
 
     - uses: actions/upload-artifact@v3
       with:
-        name: font1.ttc
-        path: ${{ github.workspace }}
+        name: font.tar.gz
+        path: ${{ github.workspace }}/ttf2ttc
