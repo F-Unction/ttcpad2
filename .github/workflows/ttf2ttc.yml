@@ -14,9 +14,9 @@ jobs:
     - name: Unite
       run: |
         cd ttf2ttc
-        .\allunitettc.exe
+        .\unitettc.exe 1.ttc time1.ttf
 
     - uses: actions/upload-artifact@v3
       with:
         name: font.tar.gz
-        path: ${{ github.workspace }}/ttf2ttc
+        path: ${{ github.workspace }}\ttf2ttc
